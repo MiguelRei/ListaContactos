@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "@string/Nome"
+        android:layout_above="@+id/etAutor"
+        android:layout_toRightOf="@+id/tvName"
+        android:layout_toEndOf="@+id/tvName" />
+
+    <requestFocus/>
+
+    <EditText
+        android:id="@+id/etAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "@string/Autor"
+        android:layout_above="@+id/etPaginas"
+        android:layout_toRightOf="@+id/tvAutor"
+        android:layout_toEndOf="@+id/tvAutor" />
+
+    <EditText
+        android:id="@+id/etPaginas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint = "@string/NumeroPaginas"
+        android:layout_above="@+id/btInsereLivro"
+        android:layout_marginBottom="24dp"
+        android:layout_toEndOf="@+id/tvNPaginas"
+        android:layout_toRightOf="@+id/tvNPaginas" />
+
+    <Button
+        android:id="@+id/btInsereLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/InserirEsteLivro"
+        android:layout_marginBottom="70dp"
+        android:layout_above="@+id/btVerBib"
+        android:layout_toStartOf="@+id/btLogOut"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btVerBib"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/biblioteca"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp" />
+
+    <Button
+        android:id="@+id/btLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/logout" />
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_alignBottom="@+id/btLogOut"
+        android:layout_alignLeft="@+id/etPaginas"
+        android:layout_alignStart="@+id/etPaginas" />
+
+    <Button
+        android:id="@+id/btUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Atualizar"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/btVerBib"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/tvname"
+        android:layout_alignEnd="@+id/tvname" />
+
+    <TextView
+        android:id="@+id/TVId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ID"
+        android:textSize="10pt"
+        android:textColor="#000000"
+        android:layout_alignBaseline="@+id/tvnID"
+        android:layout_alignBottom="@+id/tvnID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/tvnID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etNome"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/TVId"
+        android:layout_toRightOf="@+id/TVId"
+        android:ems="10"
+        android:hint="Preencher apenas em actualizações"
+        android:inputType="number"
+        android:textSize="10pt"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOME:"
+        android:textSize="10pt"
+        android:textColor="#000000"
+        android:layout_alignBaseline="@+id/etNome"
+        android:layout_alignBottom="@+id/etNome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AUTOR:"
+        android:textSize="10pt"
+        android:textColor="#000000"
+        android:layout_alignBaseline="@+id/etAutor"
+        android:layout_alignBottom="@+id/etAutor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvNPaginas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nº PÁGINAS:"
+        android:textSize="10pt"
+        android:textColor="#000000"
+        android:layout_alignBaseline="@+id/etPaginas"
+        android:layout_alignBottom="@+id/etPaginas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btApagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btUpdate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="APAGAR"
+        android:layout_toRightOf="@+id/btUpdate"
+        android:layout_toEndOf="@+id/btUpdate" />
+
+
+</RelativeLayout>
